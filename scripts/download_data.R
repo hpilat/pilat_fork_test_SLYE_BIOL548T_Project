@@ -13,6 +13,9 @@ getwd() #my working directory is setup because I started a project
 #READ ME Files created using menus
 dir.create("data/")
 dir.create("scripts/")
+dir.create("literature/")
+dir.create("outputs/")
+
 #make a subfolder
 dir.create("data/metadata")
 dir.create("data/invertebrate_density")
@@ -32,10 +35,23 @@ download.file(url = meta_url, destfile = meta.dest.file)
 download.file(url = class_url, destfile = clas.dest.file)
 download.file(url = dens_url, destfile = dens.dest.file)
 
+#Read The files 
 
+library("tidyverse")
 
+invert_meta <- read_csv("data/metadata/NRCA_1995_2005_TLW_metadata.csv") #there is a character that cannot be read by R
+invert_class <- read_csv("data/invertebrate_classification/NRCA_1995_2005_TLW_invertclassification.csv")
+invert_density <- read_csv("data/invertebrate_density/NRCA_1995_2005_TLW_invertdensity.csv")
 
+#getting a .csl file for markdown ! using Ecology letters
 
+library("rmarkdown")
+#tinytex::install_tinytex()
+library("tinytex")
+
+csl: "ecology-letters.csl "
+
+####this is for reference later, but I downloaded from Zotero and added to my directory
 
 
 
