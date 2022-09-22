@@ -8,3 +8,6 @@ construct a repository, push, and connect it to OSF.
 
 The repository contains the files one might expect to see in a typical ecological study including 
 data, scripts, figures, manuscript, etc. 
+
+
+This project is being reviewed by Hannah Pilat
